@@ -23,11 +23,8 @@ if __name__ == '__main__':
             break
 
     # Split the initial list into two, with even and odd elements
-    for i in range(len(inp_list)):
-        if i % 2 == 0:
-            f_out.append(inp_list[i])
-        else:
-            s_out.append(inp_list[i])
+    f_out = inp_list[::2]
+    s_out = inp_list[1::2]
 
     # Sort new lists
     f_out.sort()

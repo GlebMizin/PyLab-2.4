@@ -12,6 +12,7 @@ if __name__ == '__main__':
         exit(1)
 
     ind_list, out_list = zip(*[(ind + 1, num) for ind, num in enumerate(inp_list) if num % 3 == 0 and num != 0])
+    out_list = [*out_list]
 
     print(f'List of all elements divisible by three: {out_list}')
     print(f'Index of last element divisible by three: {ind_list[-1]}')
