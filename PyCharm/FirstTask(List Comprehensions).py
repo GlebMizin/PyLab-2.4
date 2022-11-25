@@ -5,14 +5,13 @@ import sys
 
 
 if __name__ == '__main__':
-    inp_list = list(map(int, input().split()))
-    out_list = list()
-    if len(inp_list) != 10:
+    il = list(map(int, input().split()))
+    if len(il) != 10:
         print("Wrong list range", file=sys.stderr)
         exit(1)
 
-    ind_list, out_list = zip(*[(ind + 1, num) for ind, num in enumerate(inp_list) if num % 3 == 0 and num != 0])
-    out_list = [*out_list]
+    ol = [num for ind, num in enumerate(il) if num % 3 == 0 and num != 0]
+    il = [ind for ind, num in enumerate(il) if num % 3 == 0 and num != 0]
 
-    print(f'List of all elements divisible by three: {out_list}')
-    print(f'Index of last element divisible by three: {ind_list[-1]}')
+    print(f'List of all elements divisible by three: {ol}')
+    print(f'Index of last element divisible by three: {il[-1]}')

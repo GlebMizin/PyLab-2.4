@@ -3,8 +3,6 @@
 
 if __name__ == '__main__':
     inp_list = list(map(float, input().split()))
-    f_out = list()
-    s_out = list()
     final_out = list()
     prod = 1
     Sum = 0
@@ -31,14 +29,13 @@ if __name__ == '__main__':
     s_out.sort()
 
     # Create a new list by inserting elements one by one from the sorted lists
-    for i in range(len(f_out)):
-        if counter == len(s_out):
+    for i, v in enumerate(f_out):
+        if i == len(s_out):
             final_out.append(f_out[i])
             break
         else:
             final_out.append(f_out[i])
             final_out.append(s_out[i])
-            counter += 1
 
     # Output
     print(f'Product of non-negative numbers: {prod}')

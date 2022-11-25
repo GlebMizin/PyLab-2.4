@@ -14,9 +14,7 @@ if __name__ == '__main__':
     for ind, num in enumerate(inp_list):
         if num % 3 == 0 and num != 0:
             out_list.append(num)
-            last_index = ind + 1
-    print(out_list)
-    print(last_index)
+            last_index = ind
 
     print(f'List of all elements divisible by three: {out_list}')
     print(f'Index of last element divisible by three: {last_index}')
