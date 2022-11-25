@@ -6,7 +6,6 @@ if __name__ == '__main__':
     final_out = list()
     prod = 1
     Sum = 0
-    counter = 0
 
     # Multiply all non-negative elements
     for item in inp_list:
