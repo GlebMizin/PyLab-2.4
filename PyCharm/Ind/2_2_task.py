@@ -12,7 +12,8 @@ if __name__ == '__main__':
     p = math.prod(i for i in inp_list if i > 0)
 
     # Sum all the elements until we meet the minimum
-    s = sum(i for i in inp_list if i > min(inp_list))
+    minimum = min(inp_list)
+    s = sum(i for i in inp_list if i > minimum)
 
     # Split the initial list into two, with even and odd elements
     f_out = inp_list[::2]
